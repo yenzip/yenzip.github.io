@@ -25,12 +25,12 @@
 
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background: #E8E8E8;
+    background: #E0E0E0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 0 80px;
-    gap: 32px;
+    gap: 28px;
   }
 
   .page {
@@ -41,18 +41,18 @@
     box-shadow: 0 2px 16px rgba(0,0,0,0.12);
     padding: var(--pad);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     box-sizing: border-box;
   }
 
   /* ─── Page 1: About Me ─── */
   .page-label {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
-    color: var(--gray-label);
-    letter-spacing: 0.08em;
+    color: var(--gray-400);
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: 28px;
+    margin-bottom: 14px;
   }
 
   .name-badge {
@@ -97,16 +97,16 @@
 
   .two-col {
     display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 0 32px;
+    grid-template-columns: 150px 1fr;
+    gap: 0 28px;
     align-items: start;
   }
 
   .col-label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    color: var(--gray-400);
-    letter-spacing: 0.06em;
+    color: var(--gray-600);
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding-top: 2px;
   }
@@ -118,9 +118,9 @@
   }
 
   .intro-body {
-    font-size: 13px;
-    line-height: 1.9;
-    color: var(--gray-900);
+    font-size: 12.5px;
+    line-height: 1.85;
+    color: var(--gray-600);
   }
   .intro-body p + p { margin-top: 12px; }
 
@@ -152,8 +152,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 13px;
-    color: var(--gray-900);
+    font-size: 12.5px;
+    color: var(--black);
   }
   .skill-badge {
     display: inline-block;
@@ -168,9 +168,9 @@
     overflow: hidden;
   }
   .level-btn {
-    padding: 3px 10px;
-    font-size: 11px;
-    font-weight: 500;
+    padding: 3px 12px;
+    font-size: 10.5px;
+    font-weight: 600;
     color: var(--gray-400);
     background: transparent;
   }
@@ -190,13 +190,15 @@
     margin-bottom: 12px;
   }
   .project-name {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
     color: var(--black);
+    letter-spacing: -0.02em;
   }
   .project-period {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--gray-400);
+    letter-spacing: 0.01em;
   }
   .project-tag {
     display: inline-flex;
@@ -210,15 +212,15 @@
     margin-left: auto;
   }
   .project-content {
-    font-size: 13px;
-    color: var(--gray-900);
-    line-height: 1.8;
+    font-size: 12px;
+    color: var(--gray-600);
+    line-height: 1.75;
   }
   .project-content ul {
     padding-left: 18px;
   }
   .project-content li {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .project-content li::marker {
     color: var(--main);
@@ -228,10 +230,10 @@
     font-weight: 700;
     color: var(--blue-600);
     background: #EFF6FF;
-    border-radius: 3px;
-    padding: 1px 7px;
+    border-radius: 4px;
+    padding: 2px 8px;
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .project-content .highlight {
     font-weight: 700;
@@ -265,14 +267,14 @@
     padding: 12px 0;
   }
   .cert-name {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     color: var(--black);
     min-width: 120px;
   }
   .cert-date {
-    font-size: 13px;
-    color: var(--gray-600);
+    font-size: 12px;
+    color: var(--gray-400);
   }
 
   /* ─── Education ─── */
@@ -307,11 +309,13 @@
   .skill-group-label {
     font-size: 10px;
     font-weight: 700;
-    color: var(--gray-400);
-    letter-spacing: 0.08em;
+    color: var(--gray-600);
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 4px;
-    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 3px;
   }
 
   .num-hl {
@@ -326,14 +330,47 @@
   }
 
   .hl {
-    background: linear-gradient(transparent 55%, rgba(209,254,93,0.55) 45%);
+    background: linear-gradient(transparent 50%, rgba(209,254,93,0.7) 50%);
     font-weight: 700;
-    padding: 0 1px;
+    padding: 0 2px;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
   }
 
   @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; border-radius: 0; margin: 0; width: 100%; }
+    html, body {
+      width: 210mm;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+      display: block !important;
+      gap: 0 !important;
+    }
+    .page {
+      width: 210mm !important;
+      min-height: 297mm !important;
+      margin: 0 !important;
+      padding: 36px 44px !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      overflow: visible !important;
+      box-sizing: border-box !important;
+      display: block !important;
+    }
+    .page:last-child {
+      page-break-after: auto !important;
+      break-after: auto !important;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
   }
 </style>
 </head>
@@ -379,7 +416,7 @@
     <div>
       <div style="display:flex; flex-direction:column; gap:10px;">
         <!-- Email -->
-        <a href="mailto:djadpfa1002@naver.com" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--black);">
+        <a href="javascript:void(0)" onclick="navigator.clipboard.writeText('djadpfa1002@naver.com')" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--black); cursor:default;">
           <span style="width:32px;height:32px;background:#F4F4F5;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="4" width="20" height="16" rx="2" stroke="#212121" stroke-width="1.8"/>
@@ -395,7 +432,7 @@
               <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#212121"/>
             </svg>
           </span>
-          <span style="font-size:13px;">github.com/yenzip</span>
+          <span style="font-size:13px;">djadpfa1002@naver.com</span>
         </a>
         <!-- YouTube -->
         <a href="https://www.youtube.com/watch?v=Q3QGC-Llqr8&t=21s" target="_blank" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--black);">
@@ -470,13 +507,6 @@
         <div class="skill-levels">
           <div class="level-btn">하</div><div class="level-btn active">중</div><div class="level-btn">상</div>
         </div>
-      </div>      <!-- Language -->
-      <div class="skill-group-label" style="margin-top:12px;">Language</div>
-      <div class="skill-row">
-        <div class="skill-name"><span class="skill-badge"></span> C</div>
-        <div class="skill-levels">
-          <div class="level-btn active">하</div><div class="level-btn">중</div><div class="level-btn">상</div>
-        </div>
       </div>
 
     </div>
@@ -544,6 +574,7 @@
             <li>입력·선택 컴포넌트(TextField, NumberField, Combobox 등) 공통 구조 설계 및 기능 구현</li>
             <li>포맷팅, 마스킹, 정규식 검증, 트리거 등 <strong>입력 제어 기능 통합</strong></li>
             <li><strong>Storybook</strong> 기반 공통 UI 컴포넌트 문서화 및 사용 가이드 구축</li>
+            <li>인터페이스(SOAP · RESTful), <strong>대용량 엑셀 다운로드</strong>, 엑셀 업로드 팝업 React 전환 구현</li>
           </ul>
         </li>
         <li>React 전환 과정에서 <strong>업무 화면 개발 생산성 향상을 위한 자동화 체계 구축</strong>
@@ -551,13 +582,64 @@
             <li>React 기반 화면 레이아웃 패턴 및 파일 구조 표준 정의 및 문서화</li>
             <li>기존 Polymer 화면 구조를 기반으로 <span class="hl">AI(Claude Code)를 활용한 React 레이아웃 자동 생성</span> 방식 설계</li>
             <li>반복적인 화면 초기 구성 작업을 자동화하여 개발자가 비즈니스 로직에 집중할 수 있도록 개선</li>
-            <li>현재는 생성 과정을 고도화하기 위한 <strong>컨버터 도구 개발로 확장 중</strong></li>
+            <li>생성 과정을 고도화하기 위한 <strong>컨버터 도구 개발 완료</strong> (2026.03)</li>
           </ul>
         </li>
       </ul>
       <div style="margin-top:12px; padding:10px 14px; background:#F9FAFB; border-left:3px solid var(--main); border-radius:4px; font-size:12px; color:var(--gray-900);">
         <strong>성과</strong><br>
         UI 구현 방식 표준화로 서비스 개발 생산성 향상 &nbsp;·&nbsp; 화면 개발 초기 작업 자동화를 통해 개발 생산성 향상 및 온보딩 비용 감소
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ════════════════════════════════════════════ PAGE: Experience 2 ════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-label">Experience</div>
+  <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:4px;">
+    <div style="font-size:20px; font-weight:900; color:var(--black);">(주)엠로</div>
+    <div style="font-size:12px; color:var(--gray-400);">기반기술팀 · 웹 프레임워크 개발</div>
+    <div style="margin-left:auto; font-size:12px; color:var(--gray-400);">2025.05 ~ 재직 중 (정규직)</div>
+  </div>
+  <hr class="divider-bold" style="margin-bottom:16px;">
+
+  <!-- Task 3 -->
+  <div class="project-block">
+    <div class="project-header">
+      <div class="project-name" style="font-size:16px;">3. 관리자 업무 화면 React 전환</div>
+      <div class="project-period">2026.03 ~ 2026.05</div>
+    </div>
+    <div class="project-content">
+      <div style="font-size:12px; color:var(--gray-600); margin-bottom:8px; line-height:1.7;">
+        Polymer 기반 관리자 업무 화면을 <strong>React · TypeScript</strong> 기반으로 전환하며,
+        외부 시스템 인터페이스 설정, 실행 테스트, 이력 조회, 엑셀 업로드/다운로드 기능 구현
+      </div>
+      <ul>
+        <li><strong>인터페이스 관리 화면 전환</strong>
+          <ul>
+            <li><span class="hl">SOAP · RESTful · SAP 등 외부 시스템 연동 유형별 설정 화면 구현</span></li>
+            <li>RESTful 요청 데이터(Header, Query Param, Path Param, Body)를 탭 단위로 구성, <strong>JSON 편집기 기반 전송 데이터 설정</strong> 구현</li>
+            <li>API Key · Basic Auth · Bearer Token · OAuth 2.0 인증 방식별 입력 화면 및 토큰 발급 흐름 구현</li>
+            <li>송수신 데이터 구조 간 매핑 관계를 <strong>트리 그리드 기반</strong>으로 조회·설정하는 화면 구현</li>
+            <li>설정 데이터 기반 <span class="hl">실행 테스트 · 결과 검증 · 실행 이력 조회까지 연결되는 End-to-End 화면</span> 구현</li>
+          </ul>
+        </li>
+        <li><strong>주요 트러블슈팅</strong> — RESTful 실행 테스트에서 템플릿 생성 방식 차이로 발생한 <span class="hl">NPE / 500 오류 분석</span> 및 실행 모델 구성 로직 적용으로 안정화</li>
+        <li><strong>엑셀 다운로드 공통화</strong>
+          <ul>
+            <li>그리드 컬럼 정의를 서버 요청 포맷으로 변환, <span class="hl">화면 설정 기반 엑셀 다운로드</span> 구현</li>
+            <li><strong>서버 스트리밍 방식</strong> API 연계로 대용량 데이터 다운로드 지원</li>
+            <li>다단 헤더 · 드롭다운 · 셀 스타일 등 업무별 다운로드 옵션 지원</li>
+          </ul>
+        </li>
+        <li><strong>엑셀 업로드 팝업</strong> — 파일 선택 → 시트 선택 → 컬럼 매핑 → 데이터 검증 → 최종 적용의 <span class="hl">4단계 스텝퍼 팝업</span> 구현, 헤더 자동 탐색 및 자동 매핑, 검증 오류 표시 및 재검증 흐름 지원</li>
+      </ul>
+      <div style="margin-top:8px; padding:7px 12px; background:#F9FAFB; border-left:3px solid var(--main); border-radius:4px; font-size:11.5px; color:var(--gray-900);">
+        <strong>성과</strong><br>
+        레거시 Polymer 업무 화면의 React 전환으로 UI 일관성 확보 &nbsp;·&nbsp; 엑셀 처리 로직 공통화로 중복 코드 제거 및 유지보수성 향상
       </div>
     </div>
   </div>
@@ -689,9 +771,16 @@
     </div>
   </div>
 
-  <hr class="divider">
 
-  <!-- Certificate & Education -->
+</div>
+
+
+<!-- ════════════════════════════════════════════ PAGE 4: Certificates & Education ════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-label">More</div>
+  <hr class="divider-bold" style="margin-bottom: 28px;">
+
+  <!-- Certificate -->
   <div class="two-col" style="margin-bottom: 24px;">
     <div class="col-label">자격증</div>
     <div>
@@ -709,6 +798,7 @@
 
   <hr class="divider">
 
+  <!-- Education -->
   <div class="two-col">
     <div class="col-label">학력</div>
     <div>
@@ -720,10 +810,11 @@
       <div class="edu-block">
         <div class="edu-school">동양미래대학교 <span class="gpa-badge">3.61</span></div>
         <div class="edu-period">2018.03 ~ 2020.02</div>
-        <div class="edu-detail">컴퓨터정보공학 전공</div>
+        <div class="edu-detail">컴퓨터정보공학과 전공</div>
       </div>
     </div>
   </div>
+
 </div>
 
 </body>
